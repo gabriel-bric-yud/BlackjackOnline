@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang = 'en-us'>
+
+<head>
+    <title>Blackjack Online</title>
+    <meta charset = 'UTF-8'>
+    <meta name = 'viewport' content = 'width = device-width'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tektur&display=swap" rel="stylesheet">    
+    <link rel = 'stylesheet' href = 'blackjackProject.css'>
+</head>
+
+<body>
+  <div class = 'titleDiv'>
+    <a href = "https://red-flower-047b87e0f.3.azurestaticapps.net">Blackjack</a>
+  </div>
+    
+
+  <div id = 'board'>
+
+    <div id = 'dealer'>
+      <div class = 'cardPlaceHolder'></div>
+    </div>
+
+    <div id = 'deck'>
+      <div id = 'dealerScore' class="hide"></div>
+      <div class = 'cardPlaceHolder'>
+        <div class = 'backCard show'></div>
+      </div>
+      <div id = 'playerScore' class="hide"></div>
+    </div>
+
+    <div id = 'player'>
+      <div class = 'cardPlaceHolder'></div>
+    </div>
+
+    <div id = 'userInterface' class = 'hide'>
+      <div id = 'playerOptions'>
+        <button type = 'button' id = 'hit'>Hit</button>
+        <button type = 'button' id = 'hold'>Hold</button>
+      </div>
+    </div>
+
+    <div id = 'chips' class = 'hide'>
+      <div id="chipStacks"></div>
+    </div>
+
+  </div>
+
+  <div id = 'userMoney'>
+
+    <div id = 'total'> Chips: <span id="chipsTotal">1000</span> </div>
+
+    <div id = 'betting'>
+      
+      <div id = 'bet'>
+        <select name = 'betSize' id="betSize">
+          <option selected>5</option>
+          <option>10</option>
+          <option>25</option>
+          <option>50</option>
+          <option>100</option>
+          <option>250</option>
+          <option>500</option>
+          <option>750</option>
+          <option>1000</option>
+          <option>2000</option>
+        </select>
+
+        <button type = 'button' id = 'betBtn'>Bet</button>
+      </div>
+
+      <div id="money">
+        <span>Bet: <span id = 'betValue'> 0 </span></span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src = 'blackjackProject.js'></script>
+
+</body>
+</html>
