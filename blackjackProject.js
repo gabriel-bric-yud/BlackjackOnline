@@ -450,8 +450,17 @@ function turnNotification(msgText, parent, acceptText, rejectText, colorData) {
     reset()
 
     setTimeout(() => {
+      userInterface.style.opacity = 0
+      chipsDiv.style.opacity = 0;
+      playerScore.style.opacity = 0;
+      dealerScore.style.opacity = 0;
+    
+      showHide(userInterface)
+      showHide(chipsDiv)
+      showHide(playerScore)
+      showHide(dealerScore)
       startGameButton()
-    },201)
+    },200)
     
   })
 
@@ -635,7 +644,7 @@ function newTurn() {
   //betSize.style.pointerEvents = 'all'
   betValue.innerHTML = "???"
 
-  notification(`Make a bet!`, board, '#47F5A1', 3500)
+  notification(`Make a bet!`, board, '#47F5A1', 2500)
   setTimeout(() => {
     flashingButton(betSize)
     flashingButton3(betBtn)
@@ -691,18 +700,6 @@ function reset() {
   playerScore.textContent = 0
   cardIndex = 1000;
   betSize.value = '5'
-
-  setTimeout(() => {
-    userInterface.style.opacity = 0
-    chipsDiv.style.opacity = 0;
-    playerScore.style.opacity = 0;
-    dealerScore.style.opacity = 0;
-
-    showHide(userInterface)
-    showHide(chipsDiv)
-    showHide(playerScore)
-    showHide(dealerScore)
-  },200)
 
   
   const cardTemp = document.querySelector('.cardDiv')
@@ -839,7 +836,7 @@ betBtn.addEventListener('click', (e) => {
       },2000)
     }
     else {
-      notification(`Not enough chips! Make a smaller bet.`, board, '#F55C47', 2000)
+      notification(`Not enough chips!`, board, '#F55C47', 2000)
     }
   }
   else {
@@ -908,7 +905,4 @@ window.addEventListener('load', (e) => {
 // diamond = &#9830
 // spade = &#9824
 // club = &#9827 !!
-
-
-
 
