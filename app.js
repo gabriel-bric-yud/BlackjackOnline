@@ -515,8 +515,7 @@ function dealerTurn() {
   clickable = false
   turnHoleCard()
   playerTurn = false;
-  flashingButton4(hit)
-  flashingButton4(hold)
+
 
   setTimeout(() => {
     let dealerMove = setInterval(() => {
@@ -561,10 +560,6 @@ betBtn.addEventListener('click', (e) => {
       flashingButton3(betBtn)
       
       deal()
-      setTimeout(() => {
-        flashingButton4(hit)
-        flashingButton4(hold)
-      },1000)
     }
     else {
       notification(`Not enough chips!`, board, '#F55C47', 800)
@@ -740,14 +735,6 @@ function flashingButton(btn) {
   }
 }
 
-function flashingButton2(btn) {
-  if (btn.classList.contains('flash2')) {
-    btn.classList.remove('flash2')
-  }
-  else {
-    btn.classList.add('flash1')
-  }
-}
 
 function flashingButton3(btn) {
   if (btn.classList.contains('flash3')) {
@@ -755,15 +742,6 @@ function flashingButton3(btn) {
   }
   else {
     btn.classList.add('flash3')
-  }
-}
-
-function flashingButton4(btn) {
-  if (btn.classList.contains('flash4')) {
-    btn.classList.remove('flash4')
-  }
-  else {
-    btn.classList.add('flash4')
   }
 }
 
