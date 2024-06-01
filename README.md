@@ -1,6 +1,6 @@
 # BlackjackOnline 
 
-Play my free Blackjack web app! Face-off against the dealer and try to not to go bust!
+Play my free Blackjack web app! Face-off against the dealer and try not to go bust!
 
 Currently built with 100% vanilla Javascript.
 
