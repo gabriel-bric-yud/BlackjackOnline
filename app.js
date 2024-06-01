@@ -22,6 +22,7 @@ let DECK = []
 let playerCards = []
 let dealerCards = []
 let currentBet = 0
+let totalChips
 
 let playerTotal = 0
 let dealerTotal = 0
